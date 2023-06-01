@@ -27,12 +27,17 @@ execute on a pre-set interval that is configurable by the user. A unique schedul
 needs to be created per interface being monitored. Ideally, these would be set on staggered 
 intervals to lessen the load on the platform, but overall, scale shouldn't be a concern.
 
+When executing the script, two options are required:
+
+- ip = The remote IP that delay will be measured to (the destination of the TWAMP Session)
+- interface = The local interface where the configuration will be updated
+
 The interval minimum is 2 minutes up to a 24 hour window. The number of logs to be kept is up 
 to the user (including 0 logs). The timeout value should be set a 1 minute. It should never take 
 longer than a few seconds to fully complete.
 
 ```
-schedule et47delaymon interval 2 timeout 1 max-log-files 30 command bash python3 /mnt/flash/delayMon.py --ip 1.1.1.2 --interface Ethernet47
+schedule et47delaymon interval 2 timeout 1 max-log-files 30 command bash python3 /mnt/flash/delaymon.py --ip 1.1.1.2 --interface Ethernet47
 ```
 
 A logfile will be created each time the script is running displaying the results. These 

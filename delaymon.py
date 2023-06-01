@@ -41,7 +41,7 @@ execute on a pre-set interval that is configurable by the user.  A unique schedu
 needs to be created per interface being monitored. Ideally, these would be set on staggered 
 intervals to lessen the load on the platform, but overall, scale shouldn't be a concern.
 
-schedule et47delaymon interval 2 timeout 1 max-log-files 30 command bash python3 /mnt/flash/delayMon.py --ip 1.1.1.2 --interface Ethernet47
+schedule et47delaymon interval 2 timeout 1 max-log-files 30 command bash python3 /mnt/flash/delaymon.py --ip 1.1.1.2 --interface Ethernet47
 
 Created by Dimitri Capetz - dcapetz@arista.com
 """
