@@ -17,6 +17,11 @@ management api http-commands
    no shutdown
 ```
 
+# Usage
+
+To leverage this script, simply copy via an method (SCP, etc.) to the flash: of an 
+EOS device.
+
 The script is meant to be executed using a CLI Schedule in EOS. This will allow it to 
 execute on a pre-set interval that is configurable by the user. A unique schedule 
 needs to be created per interface being monitored. Ideally, these would be set on staggered 
