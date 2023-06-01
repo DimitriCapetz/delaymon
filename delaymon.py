@@ -64,7 +64,6 @@ def parseargs():
     args = parser.parse_args()
     return args
 
-#
 def twamp_test(endpoint):
     ''' Execute TWAMP Test via eAPI Socket
         
