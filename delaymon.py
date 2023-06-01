@@ -102,7 +102,7 @@ def update_min_delay(target_interface, min_delay):
         if cmd_result != {}:
             config_result += "Error applying command: {}\n".format(cmd_result)
     if config_result == "":
-        result = "Min-delay setting on {} successfully updated to {}".format(target_interface, min_delay)
+        result = "Min-delay setting on {} successfully updated to {} microseconds".format(target_interface, min_delay)
     else:
         result = config_result
     return result
